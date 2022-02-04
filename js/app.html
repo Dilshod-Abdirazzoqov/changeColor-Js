@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="main"></p>
+    <!-- Click -->
+<!-- <button onclick="document.getElementById('main').innerHTML = Date()">Show Time</button> -->
+
+<button>Change background-color of body</button>
+    <script>
+        // first-step
+      const changeButton = document.querySelector('button');
+        //second-step
+        function Rangchi(number){
+            // Math.floor() - sonlarni yaxlitlab(butun son qilib olish) oladigan metod
+            return Math.floor(Math.random()*(number + 1));
+        }
+
+        changeButton.addEventListener('click', () => {
+            const randomRgb = `rgb(${Rangchi(255)},${Rangchi(255)},${Rangchi(255)})`;
+            document.body.style.backgroundColor = randomRgb;
+        })
+
+    //     const uchtalik = Math.floor(Math.random()*5);
+    // if(uchtalik === 1 || uchtalik === 0 || uchtalik===2){
+    //     console.log(" ");
+    // }else{
+    //     console.log(`+9989${uchtalik} ${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}-${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}-${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}`)
+    // }
+
+
+        // console.log(`+9989${Math.floor(Math.random()*2)} ${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}-${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}-${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}`)
+    </script>
+</body>
+</html>
